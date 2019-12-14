@@ -10,7 +10,7 @@ const pool = new Pool({
     port: 5432
 })
 
-// Määritellään kysely ja mahdollinen virheilmoitus
+// Määritellään kysely ja mahdollinen virheilmoitus: kaikki työntekijät
 const getWorkers = (request, response) => {
     pool.query('SELECT * FROM tyontekija', (error, results) => {
         if (error) {
@@ -34,9 +34,8 @@ const getWorkerById = (request, response) => {
 
 // Uuden työntekijän lisäys
 const createWorker = (request, response) => {
-    const { givenname, surname } = request.body
-   // console.log(`tallennetaan ${givenname}.`)
-  
+    const { givenname, surname } = request.body // Tietokannassa tyontekija_id on laskuri, joten sitä ei anneta
+     
     pool.query('INSERT INTO tyontekija (etunimi, sukunimi) VALUES ($1, $2)', [givenname, surname], (error, results) => {
       if (error) {
         throw error
