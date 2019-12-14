@@ -6,7 +6,7 @@
  ## Alkutoimet sovelluksen luomiseksi
  Sovellus vaatii toimiakseen joitakin Node.js-kirjastoja. Sovelluksen omat perustiedot määritellään niin ikään ennen varsinaisen sovelluskoodin kirjoittamista.
  ### Sovelluksen perustiedot
- Sovelluksen perustiedot tallennetaan package.json-tiedostoon. Se luodaan kirjoittamalla komento `npm init` kehitysmpäristön terminaali-ikkunaan:
+ Sovelluksen perustiedot tallennetaan package.json-tiedostoon. Se luodaan kirjoittamalla komento `npm init` kehitysmpäristön terminaali-ikkunaan.
  
  Init-komennon suorittamisen jälkeen pyydetään sovelluksen perustiedot. Oletusasetukset hyväksytään Enter-näppäimellä. Harjoituksessa asetukset ovat seuraavat:
  ```javascript
@@ -52,7 +52,7 @@ Kirjastojen asentamisen jälkeen `package.json`-tiedostoon lisätään merkinnä
   }
 }
 ```
-
+Sovelluksien kirjastot saattavat puolestaan käyttää muita kirjastoja. Riippuvuudet selviävät tiedostosta `package-lock-json`. Normaalissa perussovelluskehityksessä ohjelmoijan ei tarvitse huomioida näitä. Kun sovelluskoodia säilytetään GitHub-repositoriossa, repostitorion omistaja saa ilmoituksen haavoittuvuuksista, joita mäahdollisesti sisältyy hänen käyttämiinsä kirjastoihin. Niihin saa yleensä myös korjausehdotukset.
 
 
 
