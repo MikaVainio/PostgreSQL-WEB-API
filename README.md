@@ -8,4 +8,30 @@
  ```
  npm init
  ```
- 
+ Init-komennon suorittamisen jälkeen pyydetään sovelluksen perustiedot. Harjoituksessa ne ovat seuraavat:
+ ```
+ {
+  "name": "postgresql-web-api",
+  "version": "1.0.0",
+  "description": "REST API for PostgreSQL based Inspection database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikaVainio/PostgreSQL-WEB-API.git"
+  },
+  "keywords": [
+    "REST",
+    "PostgreSQL"
+  ],
+  "author": "Mika Vainio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikaVainio/PostgreSQL-WEB-API/issues"
+  },
+  "homepage": "https://github.com/MikaVainio/PostgreSQL-WEB-API#readme"
+}
+```
+
