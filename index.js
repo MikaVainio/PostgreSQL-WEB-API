@@ -11,7 +11,9 @@ const app = express()
 
 // Määritellään parser middleware: JSON ja URL tietojen käsittelyyn (Express:n oma parseri)
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({
+    extended: false
+}))
 
 // Määritellään kuuneltava TCP-portti
 const port = 3000
@@ -19,8 +21,10 @@ const port = 3000
 // REITTIEN MÄÄRITTELYT
 
 // Määritellään juuren vastaus
-app.get('/',(request, response) => {
-    response.json({info: 'Node Postgres Web REST API Testausympäristö'})
+app.get('/', (request, response) => {
+    response.json({
+        info: 'Node Postgres Web REST API Testausympäristö'
+    })
 })
 
 // Määritellään /tyontekijat URL:n vastaus
@@ -36,4 +40,6 @@ app.post('/tyontekijat', db.createWorker)
 // PALVELIMEN KÄYNNISTYS
 
 // Luodaan kuuntelija TCP-portille ja kaiutetaan tieto konsolille
-app.listen(port, () => {console.log(`Sovellus kuuntelee TCP-porttia ${port}.`)})
+app.listen(port, () => {
+    console.log(`Sovellus kuuntelee TCP-porttia ${port}.`)
+})
