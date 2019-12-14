@@ -1,6 +1,6 @@
 // TIETOKANTAKYSELYT
 
-// Määritellään PostgreSQL-yhteys StaraPG:n tarkastus-tietokantaan
+// Määritellään PostgreSQL-yhteys StaraPG:n tarkastus-tietokantaan, tähän voi vaihtaa oman tietokannan tiedot
 const Pool = require('pg').Pool
 const pool = new Pool({
     user: 'postgres',
@@ -40,7 +40,7 @@ const createWorker = (request, response) => {
       if (error) {
         throw error
       }
-      response.status(201).send(`Käyttäjä lisätty tunnisteella: ${results.rows[0].tyontekija_id}`)
+      response.status(201).send(`Käyttäjä lisätty tunnisteella: ${results.rows[0].tyontekija_id}`) // Selvitetään taulun laskurin arvo
     })
   }
 
