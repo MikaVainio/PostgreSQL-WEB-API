@@ -5,7 +5,7 @@
 
  ## Alkutoimet sovelluksen luomiseksi
  Sovelluksen perustiedot tallennetaan package.json-tiedostoon. Se luodaan kirjoittamalla seuraava komento kehitysmpäristön terminaali-ikkunaan:
- ```
+ ```javascript
  npm init
  ```
  Init-komennon suorittamisen jälkeen pyydetään sovelluksen perustiedot. Harjoituksessa ne ovat seuraavat:
@@ -34,4 +34,4 @@
   "homepage": "https://github.com/MikaVainio/PostgreSQL-WEB-API#readme"
 }
 ```
-
+Seuraavassa vaiheessa otetaann käyttöön sovelluksessa tarvittavat kirjastot. Express-kirjaston avulla rakennetaan web-palvelimen runko. Se sisältää middleware-toiminnot HTTP-pyyntöjen sisällön käsittelyyn, URL-reitityksessä vaadittavat toiminnot sekä muut web-palvelimen perustoiminnot. Pg-kirjasto puolestaan mahdollistaa tietokantayhteyksien muodostamisen ja tietojen siirron web-palvelimen ja tietokantapalvelimen välillä.
