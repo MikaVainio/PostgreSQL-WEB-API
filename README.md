@@ -55,7 +55,7 @@ Kirjastojen asentamisen jälkeen `package.json`-tiedostoon lisätään merkinnä
 Sovelluksien kirjastot saattavat puolestaan käyttää muita kirjastoja. Riippuvuudet selviävät tiedostosta `package-lock.json`. Normaalissa perussovelluskehityksessä ohjelmoijan ei tarvitse huomioida näitä. Kun sovelluskoodia säilytetään GitHub-repositoriossa, repostitorion omistaja saa ilmoituksen haavoittuvuuksista, joita mäahdollisesti sisältyy hänen käyttämiinsä kirjastoihin. Niihin saa yleensä myös korjausehdotukset.
 
 ## Valmiit tiedostot
-Harjoitukseen on tehty sovelluksen pääohjelman runko `index.js` sekä CRUD-kyselyt `tyontekijat`-tauluun tiedostossa `queries.js`. Sovelluksen arkkitehtuuria ja testauksessa tarvittavia työkaluja käsitellään tarkemmin Wiki-sivuilla.
+Harjoitukseen on tehty sovelluksen pääohjelman runko `index.js` sekä CRUD-kyselyt `tyontekijat`-tauluun tiedostossa `queries.js`. Sovelluksen arkkitehtuuria ja testauksessa tarvittavia työkaluja käsitellään tarkemmin [Wiki-sivuilla ] (https://github.com/MikaVainio/PostgreSQL-WEB-API/wiki).
 
 
 
