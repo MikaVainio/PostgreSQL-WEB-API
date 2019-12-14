@@ -37,6 +37,12 @@ app.get('/tyontekijat/:id', db.getWorkerById)
 
 app.post('/tyontekijat', db.createWorker)
 
+// Määritellään työntekijän tietojen päivitys
+app.put('/tyontekijat/:id', db.updateWorker)
+
+// Määritellään työntekijän poisto
+app.delete('/tyontekijat/:id', db.deleteWorker)
+
 // PALVELIMEN KÄYNNISTYS
 
 // Luodaan kuuntelija TCP-portille ja kaiutetaan tieto konsolille

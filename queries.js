@@ -39,7 +39,7 @@ const createWorker = (request, response) => {
     const {
         givenname,
         surname
-    } = request.body // Tietokannassa tyontekija_id on laskuri, joten sitä ei anneta
+    } = request.body // Tietokannassa tyontekija_id on laskuri (serial), joten sitä ei anneta
 
     pool.query('INSERT INTO tyontekija (etunimi, sukunimi) VALUES ($1, $2)', [givenname, surname], (error, results) => {
         if (error) {
@@ -69,11 +69,23 @@ const updateWorker = (request, response) => {
     )
 }
 
+// Työntekijän poistaminen
+const deleteWorker = (request, response) => {
+    const id = parseInt(request.params.id)
 
-// Julkaistaan kyselyt
+    pool.query('DELETE FROM tyontekija WHERE tyontekija_id = $1', [id], (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).send(`User deleted with ID: ${id}`)
+    })
+}
+
+// Julkaistaan kyselyt index.js-tiedostossa käytettäväksi
 module.exports = {
     getWorkers,
     getWorkerById,
     createWorker,
     updateWorker,
+    deleteWorker
 }
