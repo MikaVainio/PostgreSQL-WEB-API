@@ -34,7 +34,7 @@
   "homepage": "https://github.com/MikaVainio/PostgreSQL-WEB-API#readme"
 }
 ```
-### Kirajstojen asentaminen
+### Kirjastojen asentaminen
 Seuraavassa vaiheessa otetaann käyttöön sovelluksessa tarvittavat kirjastot. Express-kirjaston avulla rakennetaan web-palvelimen runko. Se sisältää middleware-toiminnot HTTP-pyyntöjen sisällön käsittelyyn, URL-reitityksessä vaadittavat toiminnot sekä muut web-palvelimen perustoiminnot. Pg-kirjasto puolestaan mahdollistaa tietokantayhteyksien muodostamisen ja tietojen siirron web-palvelimen ja tietokantapalvelimen välillä. Kirjastot asennetaan komennolla `npm install express pg`.
 
 ### Sovelluksen ajamaminen
