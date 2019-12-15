@@ -45,7 +45,7 @@ const createWorker = (request, response) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`Käyttäjä lisätty tunnisteella: ${results.rows[0].tyontekija_id}`) // Selvitetään taulun laskurin arvo
+        response.status(201).send(`Uusi yöntekijä lisätty tunnisteella: ${results.rows[0].tyontekija_id}`) // Selvitetään taulun laskurin arvo
     })
 }
 
@@ -64,7 +64,7 @@ const updateWorker = (request, response) => {
             if (error) {
                 throw error
             }
-            response.status(200).send(`User modified with ID: ${id}`)
+            response.status(200).send(`Työntekijän ${id} tiedot on päivitetty`)
         }
     )
 }
@@ -77,7 +77,7 @@ const deleteWorker = (request, response) => {
         if (error) {
             throw error
         }
-        response.status(200).send(`User deleted with ID: ${id}`)
+        response.status(200).send(`Työntekijä, jonka tunnus oli ${id}, on poistettu`)
     })
 }
 
