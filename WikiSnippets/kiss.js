@@ -14,6 +14,6 @@ const createWorker = (request, response) => {
         }
 
         // Muussa tapauksessa lähetetään statustieto 201 (Created) ja selväkielinen teksti 
-        response.status(201).send(`Uusi yöntekijä lisätty `) 
+        response.status(201).send(`Uusi työntekijä lisätty `) 
     })
 }
