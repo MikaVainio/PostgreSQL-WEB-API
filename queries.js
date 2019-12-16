@@ -45,7 +45,7 @@ const createWorker = (request, response) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`Uusi yöntekijä lisätty tunnisteella: ${results.rows[0].tyontekija_id}`) // Selvitetään taulun laskurin arvo
+        response.status(201).send(`Uusi yöntekijä lisätty `) 
     })
 }
 
