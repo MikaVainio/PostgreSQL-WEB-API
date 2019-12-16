@@ -36,10 +36,7 @@ const getWorkerById = (request, response) => {
 
 // Uuden työntekijän lisäys
 const createWorker = (request, response) => {
-    const {
-        givenname,
-        surname
-    } = request.body // Tietokannassa tyontekija_id on laskuri (serial), joten sitä ei anneta
+    const {givenname, surname} = request.body // Tietokannassa tyontekija_id on laskuri (serial), joten sitä ei anneta
 
     pool.query('INSERT INTO tyontekija (etunimi, sukunimi) VALUES ($1, $2)', [givenname, surname], (error, results) => {
         if (error) {
@@ -52,10 +49,7 @@ const createWorker = (request, response) => {
 // Työntekijän tietojen päivitys
 const updateWorker = (request, response) => {
     const id = parseInt(request.params.id)
-    const {
-        givenname,
-        surname
-    } = request.body
+    const {givenname, surname} = request.body
 
     pool.query(
         'UPDATE tyontekija SET etunimi = $1, sukunimi = $2 WHERE tyontekija_id = $3',
