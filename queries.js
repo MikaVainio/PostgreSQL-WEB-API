@@ -58,7 +58,7 @@ const updateWorker = (request, response) => {
             if (error) {
                 throw error
             }
-            response.status(200).send(`Työntekijän ${id} tiedot on päivitetty`)
+            response.status(205).send(`Työntekijän ${id} tiedot on päivitetty`)
         }
     )
 }
@@ -71,7 +71,7 @@ const deleteWorker = (request, response) => {
         if (error) {
             throw error
         }
-        response.status(200).send(`Työntekijä, jonka tunnus oli ${id}, on poistettu`)
+        response.status(205).send(`Työntekijä, jonka tunnus oli ${id}, on poistettu`)
     })
 }
 
